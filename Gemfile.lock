@@ -1,38 +1,36 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (4.2.9)
-      activesupport (= 4.2.9)
-      builder (~> 3.1)
-    activerecord (4.2.9)
-      activemodel (= 4.2.9)
-      activesupport (= 4.2.9)
-      arel (~> 6.0)
-    activesupport (4.2.9)
+    activemodel (5.1.4)
+      activesupport (= 5.1.4)
+    activerecord (5.1.4)
+      activemodel (= 5.1.4)
+      activesupport (= 5.1.4)
+      arel (~> 8.0)
+    activesupport (5.1.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
       minitest (~> 5.1)
-      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    arel (6.0.4)
-    builder (3.2.3)
+    arel (8.0.0)
     concurrent-ruby (1.0.5)
     i18n (0.9.3)
       concurrent-ruby (~> 1.0)
     minitest (5.11.1)
-    mustermann (1.0.1)
-    mysql2 (0.4.3)
-    rack (2.0.3)
-    rack-protection (2.0.0)
+    mysql2 (0.4.10)
+    rack (1.6.8)
+    rack-protection (1.5.3)
       rack
     rake (12.3.0)
-    sinatra (2.0.0)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.0)
-      tilt (~> 2.0)
+    sinatra (1.4.8)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
     sinatra-activerecord (2.0.13)
       activerecord (>= 3.2)
       sinatra (>= 1.0)
+    sinatra-param (1.4.0)
+      sinatra (~> 1.3)
     thread_safe (0.3.6)
     tilt (2.0.8)
     tzinfo (1.2.4)
@@ -45,8 +43,9 @@ DEPENDENCIES
   activerecord
   mysql2
   rake
-  sinatra
+  sinatra (~> 1.4)
   sinatra-activerecord
+  sinatra-param
 
 RUBY VERSION
    ruby 2.4.2p198
