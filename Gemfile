@@ -2,6 +2,7 @@ ruby '2.4.2'
 source 'https://rubygems.org'
 
 gem 'activerecord'
+gem 'minitest'
 gem 'mysql2'
 gem 'rake'
 gem 'sinatra', '~> 1.4'
