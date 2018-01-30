@@ -6,6 +6,8 @@ require 'json'
 class App < Sinatra::Base
   helpers Sinatra::Param
 
+  set :show_exceptions, :after_handler
+
   before do
     content_type :json
   end
@@ -13,16 +15,17 @@ class App < Sinatra::Base
   get '/' do
     param :sample_param, String, required: false
 
-    { test: 'hello_world' }.to_json
-  end
-
-  get '/submit/:text' do
-    { test: params['text'] }.to_json
+    { hello: 'world' }.to_json
   end
 
   get '/error' do
     halt 400, { error: 'not found' }.to_json
   end
 
-  run! if app_file == $0
+  error ActiveRecord::RecordNotFound do
+    status(404)
+    { error_code: 'resource_not_found' }.to_json
+  end
 end
+
+Dir.glob('./{models,routes}/*.rb').each { |file| require_relative file }
