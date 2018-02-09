@@ -77,6 +77,7 @@ DEPENDENCIES
   activerecord
   minitest
   mysql2
+  rack-test
   rake
   rerun
   sinatra (~> 2.0.0)

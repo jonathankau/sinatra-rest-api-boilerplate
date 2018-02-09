@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+Dir.glob('**/*-spec.rb').each do |f|
+  require_relative f
+end

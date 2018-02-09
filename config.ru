@@ -1,2 +1,9 @@
 require './app.rb'
-run App
+
+map '/' do
+  run ApplicationController
+end
+
+map '/samples' do
+  run SampleController
+end
