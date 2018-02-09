@@ -8,10 +8,6 @@ end
 
 include Rack::Test::Methods
 
-def app
-  App
-end
-
 module Rack
   class Response
     def json_body
