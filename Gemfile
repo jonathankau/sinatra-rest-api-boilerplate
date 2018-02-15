@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 gem 'activerecord'
 gem 'mysql2'
+gem 'puma'
 gem 'rake'
 gem 'sinatra', '~> 2.0.0'
 gem 'sinatra-activerecord'
